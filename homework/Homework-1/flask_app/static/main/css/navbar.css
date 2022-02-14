@@ -1,0 +1,160 @@
+nav {
+    width: 100%;
+    height: 20%;
+    flex-flow: row wrap;
+    align-items: center;
+    background-color: #333;
+    position: relative;
+    display: flex;
+    color: white;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    color: gray;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.positionHeader {
+
+    position: relative;
+    left: 50px;
+}
+
+.navbar-header {
+    display: flex;
+    position: relative;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.navbar-list li {
+    display: inline-block;
+    padding: .5em;
+}
+
+.positionText1{
+    bottom: 12px;
+    position: relative;
+    right: 30px;
+
+}
+
+.positionText2{
+    bottom: 12px;
+    position: relative;
+    right: 30px;
+
+}
+
+.positionText3{
+    bottom: 12px;
+    position: relative;
+    right: 30px;
+
+}
+
+.picture{
+    position: relative;
+    right: 60px;
+
+}
+
+.pictureText{
+    color:#333;
+    font-size: 0px;
+}
+
+.image_hover:hover{
+    opacity: 50%;
+}
+
+.toggle {
+    display: none;
+}
+
+.picture2{
+    display: none;
+}
+
+@media(max-width: 650px) {
+
+    .collapse {
+        display: none;
+    }
+    .menu_list {
+        position: relative;
+        bottom: 0px;
+    }
+    .menu_list li {
+        flex-flow:row;
+        width: 30%;
+        border-bottom: 2px solid white;
+        text-align: center;
+        background-color: black;
+    }
+
+    .toggle {
+        background-color: #333333;
+        height: 35px;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .toggle span {
+        position: relative;
+        width: 2em;
+        border-bottom: 2px solid black;
+        margin: 3px 0;
+    }
+
+    .picture{
+        display: none;
+    }
+
+    .picture2{
+        display: none;
+    }
+
+
+    .pictureText{
+        position: relative;
+        color: white;
+        font-size: 17px;
+    }
+
+    .positionText1{
+        position: relative;
+        bottom: 1px;
+        right: 0px;
+    }
+
+    .positionText2{
+        bottom: 1px;
+        position: relative;
+        right: 0px;
+    }
+
+    .positionText3{
+        bottom: 1px;
+        position: relative;
+        right: 0px;
+    }
+
+}
+
