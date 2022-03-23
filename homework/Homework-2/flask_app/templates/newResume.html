@@ -38,7 +38,14 @@
 </div>
 <h4>{{ pos['responsibilities']}} </h4>
 
+{% if pos['experiences'] != {} %}
+{% for exp_id, exp in pos['experiences'].items() %}
 
+
+
+
+{% endfor %}
+{% endif %}
 
 {% endfor %}
 {% endif %}

@@ -5,32 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52c4a5d6-c8aa-4739-a130-1fbc6a94d10f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Homework-2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_app/database/create_tables/experiences.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_app/database/create_tables/feedback.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_app/database/create_tables/skills.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_app/database/initial_data/experiences.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_app/database/initial_data/skills.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_app/static/main/css/footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_app/static/main/css/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_app/static/main/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_app/static/main/css/navbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_app/static/main/images/banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_app/static/main/images/menu-bar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_app/static/main/images/piano.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_app/static/main/images/social-linkedin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_app/static/main/js/homepage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_app/static/piano/css/piano.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_app/static/piano/images/texture.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_app/static/piano/js/piano.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_app/templates/piano.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_app/templates/projects.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_app/templates/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework-1/flask_app/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework-1/flask_app/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework-1/flask_app/templates/piano.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework-1/flask_app/templates/piano.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework-1/flask_app/templates/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework-1/flask_app/templates/projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/templates/newResume.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/templates/newResume.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1647915116976</updated>
       <workItem from="1647915119236" duration="2348000" />
-      <workItem from="1647919232989" duration="21389000" />
+      <workItem from="1647919232989" duration="21521000" />
     </task>
     <servers />
   </component>
