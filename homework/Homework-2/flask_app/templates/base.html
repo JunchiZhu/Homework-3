@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/main/css/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/main/css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/main/css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/main/css/footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/main/css/resume.css') }}">
+    <script src="{{ url_for('static', filename='../static/main/js/homepage.js') }}" defer></script>
+
+    {% block head %} {% endblock %}
+</head>
+<body>
+
+<header>
+    <img src="https://gitlab.msu.edu/cse477-spring-2022/course-materials/-/raw/master/homework/Homework-1/flask_app/static/main/images/banner.jpg"
+         width=100%
+         height="100%">
+</header>
+
+<nav>
+    <div class="positionHeader" style="flex: 6 1">
+        CSE 477 - Homework 1
+    </div>
+    <div>
+        <button class="toggle" type="button">
+            <img src="https://gitlab.msu.edu/cse477-spring-2022/course-materials/-/raw/master/homework/Homework-1/flask_app/static/main/images/menu-bar.png"
+                 width=40px
+                 height=30px>
+        </button>
+    </div>
+
+    <div class="collapse menu_list">
+        <ul class="nav navbar-list">
+            <li><a class="positionText1" href="/home">Home</a></li>
+            <li><a class="positionText2" href="/projects">Project</a></li>
+            <li><a class="positionText3" href="/newResume">Resume</a></li>
+            <li><a class="pictureText" href="https://www.linkedin.com/in/junchi-zhu-65b4b5190/">Linkedin</a></li>
+            <li><a class="picture2" href="https://www.linkedin.com/in/junchi-zhu-65b4b5190/">n</a></li>
+            <li><a class="picture" href="https://www.linkedin.com/in/junchi-zhu-65b4b5190/">
+                <img src="https://gitlab.msu.edu/cse477-spring-2022/course-materials/-/raw/master/homework/Homework-1/flask_app/static/main/images/social-linkedin.png"
+                     class="image_hover"
+                     width="40px"
+                     height="40px">
+            </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+{% block body %} {% endblock %}
+</main>
+
+
+<footer>
+    <p>©2022 Junchi Zhu</p>
+</footer>
+
+
+</body>
+</html>

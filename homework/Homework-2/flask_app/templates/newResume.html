@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<!-- For each institution - generate a row -->
+{% for inst_id, inst in resume_data.items() %}
+<!-- Do something... -->
+    <div class="flex-container">
+        <div class="item1">
+            <div>
+                <h1>{{ inst['name']}}</h1>
+            </div>
+        </div>
+        <div class="item2">
+            <div>
+                <h4>{{ inst['city'] + ", " +inst['state']}}</h4>
+            </div>
+        </div>
+    </div>
+
+{% if inst['positions'] != {} %}
+{% for pos_id, pos in inst['positions'].items() %}
+<!-- Do something else... -->
+<div class="flex-container">
+    <div class="item1">
+        <div>
+            <h2>{{ pos['title']}} </h2>
+        </div>
+    </div>
+    <div class="item2">
+        <div>
+            <h4>{{ pos['start_date']}} - {{ pos['end_date']}}</h4>
+        </div>
+    </div>
+</div>
+<h4>{{ pos['responsibilities']}} </h4>
+
+
+
+{% endfor %}
+{% endif %}
+
+
+{% endfor %}
+{% endblock %}
+
+

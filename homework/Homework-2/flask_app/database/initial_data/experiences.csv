@@ -1,0 +1,5 @@
+"experience_id","position_id","name","description","hyperlink","start_date","end_date"
+"1","1","Game Development","Design a simple game by using C++","https://www.linkedin.com/in/junchi-zhu-65b4b5190/","2020-01-01",NULL
+"2","1","Application Development","Design a simple Phone game by using C++","https://www.linkedin.com/in/junchi-zhu-65b4b5190/","2021-01-01","2022-01-01"
+"3","2","Design self made movie application","Design a movie maker application by using C++","https://www.linkedin.com/in/junchi-zhu-65b4b5190/","2021-01-01","2021-12-31"
+"4","3","Design iphone SE case","Using Fusion 360 design iphone SE case","https://www.linkedin.com/in/junchi-zhu-65b4b5190/","2019-01-01","2020-01-01"
