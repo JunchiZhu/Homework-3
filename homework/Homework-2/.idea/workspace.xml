@@ -5,26 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52c4a5d6-c8aa-4739-a130-1fbc6a94d10f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/flask_app/static/main/css/form.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_app/static/main/js/form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework-1/flask_app/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework-1/flask_app/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework-1/flask_app/templates/piano.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework-1/flask_app/templates/piano.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework-1/flask_app/templates/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework-1/flask_app/templates/projects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/database/initial_data/experiences.csv" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/database/initial_data/experiences.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/database/initial_data/institutions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/database/initial_data/institutions.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/database/initial_data/positions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/database/initial_data/positions.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/database/initial_data/skills.csv" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/database/initial_data/skills.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/static/main/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/static/main/css/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/static/main/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/static/main/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/static/main/css/resume.css" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/static/main/css/resume.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask_app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask_app/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/templates/newResume.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/templates/newResume.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask_app/templates/piano.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/templates/piano.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask_app/templates/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/templates/projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/utils/database/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/utils/database/database.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +62,7 @@
       <updated>1647915116976</updated>
       <workItem from="1647915119236" duration="2348000" />
       <workItem from="1647919232989" duration="55499000" />
+      <workItem from="1648147399280" duration="245000" />
     </task>
     <servers />
   </component>
