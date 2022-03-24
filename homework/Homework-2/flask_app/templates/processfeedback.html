@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>Thank you so much for your comments!</h1>
+<!-- For each institution - generate a row -->
+{% for feedback in result %}
+<div class="lineBlock">
+    <div class="grid-item">{{ feedback['name']}}</div>
+    <div class="grid-item">{{ feedback['email']}} </div>
+    <div class="grid-item">{{ feedback['comment']}}</div>
+</div>
+
+
+{% endfor %}
+
+{% endblock %}

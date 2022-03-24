@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="../static/main/css/navbar.css">
     <link rel="stylesheet" href="../static/main/css/main.css">
     <link rel="stylesheet" href="../static/main/css/footer.css">
+    <link rel="stylesheet" href="../static/main/css/form.css">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="../static/main/js/homepage.js" defer></script>
+    <script src="../static/main/js/form.js" defer></script>
     <script src="../static/piano/js/piano.js" defer></script>
 </head>
 <body>
@@ -76,6 +79,29 @@
             <li class = "Key black" id="P"><div class="BKeyText">P</div></li>
             <li class = "Key white" id=";"><div class="keyText">;</div></li>
         </ul>
+    </div>
+
+
+    <div class = "ShowForm">
+        <button id="feedback">Feedback</button>
+    </div>
+    <div class="popup">
+        <form action="/processfeedback" method="POST">
+            <div class="name">
+                <input type="text" name="userName" id="userName" placeholder="Your Name">
+
+            </div>
+            <div class="email">
+                <input type="text" name="email" id="email" placeholder="Your Email">
+            </div>
+            <div class="comment">
+                <input type="text" name="comment" id="comment" placeholder="Your Comment">
+            </div>
+            <div class="sent">
+                <input type="submit" value="submit">
+            </div>
+
+        </form>
     </div>
 </main>
 

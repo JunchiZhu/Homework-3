@@ -7,8 +7,10 @@
   <link rel="stylesheet" href="../static/main/css/navbar.css">
   <link rel="stylesheet" href="../static/main/css/main.css">
   <link rel="stylesheet" href="../static/main/css/footer.css">
+  <link rel="stylesheet" href="../static/main/css/form.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <script src="../static/main/js/homepage.js" defer></script>
+  <script src="../static/main/js/form.js" defer></script>
 </head>
 <body>
 <header>
@@ -48,6 +50,29 @@
 </nav>
 
 <main>
+
+  <div class = "ShowForm">
+    <button id="feedback">Feedback</button>
+  </div>
+  <div class="popup">
+    <form action="/processfeedback" method="POST">
+      <div class="name">
+        <input type="text" name="userName" id="userName" placeholder="Your Name">
+
+      </div>
+      <div class="email">
+        <input type="text" name="email" id="email" placeholder="Your Email">
+      </div>
+      <div class="comment">
+        <input type="text" name="comment" id="comment" placeholder="Your Comment">
+      </div>
+      <div class="sent">
+        <input type="submit" value="submit">
+      </div>
+
+    </form>
+  </div>
+
   <div class="container">
     <div class="boxPicture">
       <img src="https://media-exp1.licdn.com/dms/image/C5603AQGd8xzhqikhZQ/profile-displayphoto-shrink_800_800/0/1644592504270?e=1649894400&v=beta&t=TUojN1epH04nxextLMBDAlF0huPh3zgmFAmofedaD5Q"
@@ -65,9 +90,9 @@
     <hr>
   </div>
   <div>
-    <h1>
+    <h1 class="funfact">
       Fun Fact About Me:
-      <p>I can eat two big mac in 48 seconds</p>
+      <p class="funfact1">I can eat two big mac in 48 seconds</p>
     </h1>
 
 

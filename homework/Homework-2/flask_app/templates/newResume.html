@@ -5,6 +5,9 @@
 {% endblock %}
 
 {% block body %}
+
+
+
 <!-- For each institution - generate a row -->
 {% for inst_id, inst in resume_data.items() %}
 <!-- Do something... -->
@@ -16,10 +19,11 @@
         </div>
         <div class="item2">
             <div>
-                <h4>{{ inst['city'] + ", " +inst['state']}}</h4>
+                <h4>{{ inst['city'] + ", " + inst['state']}}</h4>
             </div>
         </div>
     </div>
+
 
 {% if inst['positions'] != {} %}
 {% for pos_id, pos in inst['positions'].items() %}
@@ -32,7 +36,12 @@
     </div>
     <div class="item2">
         <div>
-            <h4>{{ pos['start_date']}} - {{ pos['end_date']}}</h4>
+            {% set end = pos['end_date'] %}
+
+            {% if end == None %}
+                {% set end = "Current" %}
+            {% endif %}
+            <h4>{{ pos['start_date']}} - {{ end }}</h4>
         </div>
     </div>
 </div>
@@ -40,12 +49,21 @@
 
 {% if pos['experiences'] != {} %}
 {% for exp_id, exp in pos['experiences'].items() %}
+<ul>
+    <li class = "li1"><a class = "a1" href="{{ exp['hyperlink'] }}">{{ exp['name'] }}</a>: {{ exp['description'] }}</li>
+</ul>
 
+{% if exp['skills'] != {} %}
+{% for ski_id, ski in exp['skills'].items() %}
 
-
+<h4 class = "skill">skills: {{ ski['name']}}; skill level: {{ ski['skill_level']}}</h4>
 
 {% endfor %}
 {% endif %}
+
+{% endfor %}
+{% endif %}
+
 
 {% endfor %}
 {% endif %}
@@ -53,5 +71,4 @@
 
 {% endfor %}
 {% endblock %}
-
 

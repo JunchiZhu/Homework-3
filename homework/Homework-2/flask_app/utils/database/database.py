@@ -129,47 +129,12 @@ class database:
                         para = comp.split(",")
                         para2.append(para)
                 para2.pop(0)
-                print("@@@")
-                print(tableName)
+                print("!" + tableName)
                 self.insertRows(tableName,para1,para2)
+            print(tableName)
             counter += 1
-
-        institutions = self.query("SELECT * FROM institutions")
-        positions = self.query("SELECT * FROM positions")
         experiences = self.query("SELECT * FROM experiences")
-        skills = self.query("SELECT * FROM skills")
-
-
-        institution_dict = {}
-        for i in institutions:
-             ins_id = i['inst_id']
-             institution_dict[ins_id] = i
-             institution_dict[ins_id].pop('inst_id')
-             positions = self.query(f"""SELECT * FROM positions WHERE inst_id = {ins_id}""")
-             position_dict = {}
-             for j in positions:
-                 pos_id = j['position_id']
-                 position_dict[pos_id] = j
-                 position_dict[pos_id].pop('inst_id')
-                 position_dict[pos_id].pop('position_id')
-                 institution_dict[ins_id]['positions'] = position_dict
-                 experiences = self.query(f"""SELECT * FROM experiences WHERE position_id = {pos_id}""")
-                 experience_dict = {}
-                 for k in experiences:
-                     exp_id = k['experience_id']
-                     experience_dict[exp_id] = k
-                     experience_dict[exp_id].pop('experience_id')
-                     experience_dict[exp_id].pop('position_id')
-                     position_dict[pos_id]['experiences'] = experience_dict
-                     skills = self.query(f"""SELECT * FROM skills WHERE experience_id = {exp_id}""")
-                     skill_dict = {}
-                     for l in skills:
-                        ski_id = l['skill_id']
-                        skill_dict[ski_id] = l
-                        skill_dict[ski_id].pop('skill_id')
-                        skill_dict[ski_id].pop('experience_id')
-                        experience_dict[exp_id]['skills'] = skill_dict
-        print(institution_dict)
+        print(experiences)
 
 
 
@@ -190,10 +155,8 @@ class database:
             query+=")"
             if i != len(parameters)-1:
                 query+=','
-        print("####")
+        print(table)
         self.query(query)
-
-
 
 
     def getResumeData(self):
@@ -203,6 +166,8 @@ class database:
         positions = self.query("SELECT * FROM positions")
         experiences = self.query("SELECT * FROM experiences")
         skills = self.query("SELECT * FROM skills")
+
+
 
         institution_dict = {}
         for i in institutions:
@@ -235,39 +200,25 @@ class database:
                         experience_dict[exp_id]['skills'] = skill_dict
         return institution_dict
 
+    def insertFeedback(self, table='feedback',value4 = []):
+    #   query = f"INSERT IGNORE INTO {table} ({','.join(columns)}) VALUES"
+        query = f"""INSERT IGNORE INTO {table} (name,email,comment) VALUES"""
+        query+="("
+        for i in range(3):
+            query+=f"""'{value4[i]}'"""
+            if i != 2:
+                query+=','
+        query+=")"
+        self.query(query)
 
 
+    def getFeedbackDate(self):
+        feedback = self.query("SELECT * FROM feedback")
+        return feedback
 
-#         return {1: {'address' : 'NULL',
-#                         'city': 'East Lansing',
-#                        'state': 'Michigan',
-#                         'type': 'Academia',
-#                          'zip': 'NULL',
-#                   'department': 'Computer Science',
-#                         'name': 'Michigan State University',
-#                    'positions': {1: {'end_date'        : None,
-#                                      'responsibilities': 'Teach classes; mostly NLP and Web design.',
-#                                      'start_date'      : datetime.date(2020, 1, 1),
-#                                      'title'           : 'Instructor',
-#                                      'experiences': {1: {'description' : 'Taught an introductory course ... ',
-#                                                             'end_date' : None,
-#                                                            'hyperlink' : 'https://gitlab.msu.edu',
-#                                                                 'name' : 'CSE 477',
-#                                                               'skills' : {},
-#                                                           'start_date' : None
-#                                                         },
-#                                                      2: {'description' : 'introduction to NLP ...',
-#                                                             'end_date' : None,
-#                                                             'hyperlink': 'NULL',
-#                                                             'name'     : 'CSE 847',
-#                                                             'skills': {1: {'name'        : 'Javascript',
-#                                                                            'skill_level' : 7},
-#                                                                        2: {'name'        : 'Python',
-#                                                                            'skill_level' : 10},
-#                                                                        3: {'name'        : 'HTML',
-#                                                                            'skill_level' : 9},
-#                                                                        4: {'name'        : 'CSS',
-#                                                                            'skill_level' : 5}},
-#                                                             'start_date': None
-#                                                         }
-#                                                     }}}}}
+
+#
+# [{'experience_id': 1, 'position_id': 1, 'name': 'Game Development', 'description': 'Design a simple game by using C++', 'hyperlink': 'https://www.linkedin.com/in/junchi-zhu-65b4b5190/', 'start_date': datetime.date(2020, 1, 1), 'end_date': None},
+# {'experience_id': 2, 'position_id': 2, 'name': 'Application Development', 'description': 'Design a simple Phone game by using C++', 'hyperlink': 'https://www.linkedin.com/in/junchi-zhu-65b4b5190/', 'start_date': datetime.date(2021, 1, 1), 'end_date': datetime.date(2022, 1, 1)},
+#  {'experience_id': 3, 'position_id': 3, 'name': 'Design self made movie application', 'description': 'Design a movie maker application by using C++', 'hyperlink': 'https://www.linkedin.com/in/junchi-zhu-65b4b5190/', 'start_date': datetime.date(2021, 1, 1), 'end_date': datetime.date(2021, 12, 31)},
+#  {'experience_id': 4, 'position_id': 4, 'name': 'Design iphone SE case', 'description': 'Using Fusion 360 design iphone SE case', 'hyperlink': 'https://www.linkedin.com/in/junchi-zhu-65b4b5190/', 'start_date': datetime.date(2019, 1, 1), 'end_date': datetime.date(2020, 1, 1)}]

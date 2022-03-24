@@ -1,0 +1,72 @@
+
+
+.ShowForm{
+    position: fixed;
+    top: 50%;
+    left: 95%;
+    transform:rotate(90deg);
+}
+
+.ShowForm button{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+
+.popup{
+    position: fixed;
+    top: -150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    width: 30%;
+    background-color: peru;
+    padding: 2% 3%;
+    box-shadow: 1px 1px 5px 5px ;
+    border-radius: 5px;
+}
+
+.popup.show{
+    z-index: 1000;
+    opacity: 1;
+    top: 50%;
+}
+
+.name input{
+    margin: 10px 0px;
+    width: 50%;
+}
+
+.email input{
+    margin: 10px 0px;
+    width: 100%;
+}
+
+.comment input{
+    margin: 10px 0px;
+    width: 100%;
+}
+
+.sent {
+    border-radius: 5px;
+    margin: 10px 0px;
+    width: 20%;
+}
+
+.submission{
+    color: yellow;
+}
+
+
+.lineBlock{
+    grid-gap: 150px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    text-align: center;
+}

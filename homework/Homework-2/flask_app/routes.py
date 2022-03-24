@@ -32,5 +32,14 @@ def projects():
 def piano():
 	return render_template('piano.html')
 
+@app.route('/processfeedback', methods = ['POST'])
+def processfeedback():
+    param = [request.form['userName'],request.form['email'],request.form['comment']]
+    db.insertFeedback('feedback', param)
+    result = db.getFeedbackDate()
+
+    return render_template('processfeedback.html', result = result)
+
+
 
 

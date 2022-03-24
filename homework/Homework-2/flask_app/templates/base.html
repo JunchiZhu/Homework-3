@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='../static/main/css/main.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='../static/main/css/footer.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='../static/main/css/resume.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/main/css/form.css') }}">
     <script src="{{ url_for('static', filename='../static/main/js/homepage.js') }}" defer></script>
-
+    <script src="{{ url_for('static', filename='../static/main/js/form.js') }}" defer></script>
     {% block head %} {% endblock %}
 </head>
 <body>
@@ -23,7 +24,7 @@
 
 <nav>
     <div class="positionHeader" style="flex: 6 1">
-        CSE 477 - Homework 1
+        CSE 477 - Homework 2
     </div>
     <div>
         <button class="toggle" type="button">
@@ -52,7 +53,30 @@
 </nav>
 
 <main>
+    <div class = "ShowForm">
+        <button id="feedback">Feedback</button>
+    </div>
+    <div class="popup">
+        <form action="/processfeedback" method="POST">
+            <div class="name">
+                <input type="text" name="userName" id="userName" placeholder="Your Name">
+
+            </div>
+            <div class="email">
+                <input type="text" name="email" id="email" placeholder="Your Email">
+            </div>
+            <div class="comment">
+                <input type="text" name="comment" id="comment" placeholder="Your Comment">
+            </div>
+            <div class="sent">
+                <input type="submit" value="submit">
+            </div>
+
+        </form>
+    </div>
 {% block body %} {% endblock %}
+
+
 </main>
 
 
