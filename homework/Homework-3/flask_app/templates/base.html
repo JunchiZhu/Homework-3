@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/main/css/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/main/css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/main/css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/main/css/footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/main/css/resume.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/main/css/form.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/main/css/signin.css') }}">
+    <script src="{{ url_for('static', filename='../static/main/js/homepage.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='../static/main/js/form.js') }}" defer></script>
+    {% block head %} {% endblock %}
+</head>
+<body>
+
+<header>
+    <img src="../static/main/images/banner.jpg"
+         width=100%
+         height="100%"
+         loading="lazy"
+     alt="">
+</header>
+
+<nav>
+    <div class="positionHeader" style="flex: 6 1">
+        {% if user == 'Unknown' %}
+        CSE 477 - Homework 1
+
+        {% else %}
+        {{user}}
+
+        {% endif %}
+    </div>
+    <div>
+        <button class="toggle" type="button">
+            <img src="../static/main/images/menu-bar.png"
+                 width=40px
+                 height=30px
+                 loading="lazy"
+                 alt="">
+        </button>
+    </div>
+
+    <div class="collapse menu_list">
+        <ul class="nav navbar-list">
+            <li><a class="positionText1" href="/home">Home</a></li>
+            <li><a class="positionText2" href="/projects">Project</a></li>
+            <li><a class="positionText3" href="/newResume">Resume</a></li>
+            {% if user == 'Unknown' %}
+            <li><a class="positionText3" href="/login">Login</a></li>
+
+            {% else %}
+            <li><a class="positionText3" href="/logout">Logout</a></li>
+            {% endif %}
+            <li><a class="positionText3" href="/chat">Chat</a></li>
+            <li><a class="pictureText" href="https://www.linkedin.com/in/junchi-zhu-65b4b5190/">Linkedin</a></li>
+            <li><a class="picture2" href="https://www.linkedin.com/in/junchi-zhu-65b4b5190/">n</a></li>
+            <li><a class="picture" href="https://www.linkedin.com/in/junchi-zhu-65b4b5190/">
+                <img src="../static/main/images/social-linkedin.png"
+                     class="image_hover"
+                     width="40px"
+                     height="40px" alt=""
+                     loading="lazy">
+            </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <div class = "ShowForm">
+        <button id="feedback">Feedback</button>
+    </div>
+    <div class="popup">
+        <form action="/processfeedback" method="POST">
+            <div class="name">
+                <input type="text" name="userName1" id="userName" placeholder="Your Name">
+            </div>
+            <div class="email">
+                <input type="text" name="email" id="email" placeholder="Your Email">
+            </div>
+            <div class="comment">
+                <input type="text" name="comment" id="comment" placeholder="Your Comment">
+            </div>
+            <div class="sent">
+                <input type="submit" value="submit">
+            </div>
+
+        </form>
+    </div>
+{% block body %} {% endblock %}
+
+
+</main>
+
+
+<footer>
+    <p>©2022 Junchi Zhu</p>
+</footer>
+
+
+</body>
+</html>

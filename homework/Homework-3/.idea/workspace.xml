@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ea3f09c8-c590-4995-8ccf-3a7d07a1ade9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Homework-3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/database/create_tables/experiences.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/database/create_tables/feedback.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/database/create_tables/institutions.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/database/create_tables/positions.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/database/create_tables/skills.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/database/initial_data/experiences.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/database/initial_data/institutions.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/database/initial_data/positions.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/database/initial_data/skills.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/static/main/css/footer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/static/main/css/form.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/static/main/css/header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/static/main/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/static/main/css/navbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/static/main/css/resume.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/static/main/css/signin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/static/main/images/banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/static/main/images/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/static/main/images/menu-bar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/static/main/images/piano.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/static/main/images/social-linkedin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/static/main/images/zjc.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/static/main/js/form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/static/main/js/homepage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/templates/newResume.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/templates/piano.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/templates/processfeedback.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/templates/projects.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/templates/resume.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework-1/flask_app/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework-1/flask_app/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework-1/flask_app/templates/piano.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework-1/flask_app/templates/piano.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework-1/flask_app/templates/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework-1/flask_app/templates/projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework-2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework-2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework-2/flask_app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework-2/flask_app/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework-2/flask_app/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework-2/flask_app/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework-2/flask_app/templates/piano.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework-2/flask_app/templates/piano.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework-2/flask_app/templates/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework-2/flask_app/templates/projects.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="27qTtsDUq6u9qxVsKYMDgBfJ9oO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ea3f09c8-c590-4995-8ccf-3a7d07a1ade9" name="Changes" comment="" />
+      <created>1650046838142</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650046838142</updated>
+      <workItem from="1650046846224" duration="1134000" />
+      <workItem from="1650120752427" duration="12237000" />
+      <workItem from="1650152788557" duration="1321000" />
+      <workItem from="1650205665472" duration="10380000" />
+      <workItem from="1650240612650" duration="10126000" />
+      <workItem from="1650287526513" duration="14563000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

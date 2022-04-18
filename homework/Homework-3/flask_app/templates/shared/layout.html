@@ -1,0 +1,84 @@
+<!-- FILL ME IN WITH CODE FOR YOUR PAGE LAYOUT -->
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  <title>Junchi Zhu's Personal page</title>-->
+<!--  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/main.css') }}">-->
+<!--  <link rel="shortcut icon" href="{{ url_for('static', filename='main/images/favicon.ico') }}">-->
+<!--  {% block extracss %}{% endblock %}-->
+<!--  <script src="{{ url_for('static', filename='main/js/main.js') }}" defer></script>-->
+
+    <title>Junchi Zhu's Personal page</title>
+    <link rel="stylesheet" href="../static/main/css/header.css">
+    <link rel="stylesheet" href="../static/main/css/navbar.css">
+    <link rel="stylesheet" href="../static/main/css/main.css">
+    <link rel="stylesheet" href="../static/main/css/footer.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="../static/main/js/homepage.js" defer></script>
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+    <!-- The header  -->
+    <header>
+        <img src="https://gitlab.msu.edu/cse477-spring-2022/course-materials/-/raw/master/homework/Homework-1/flask_app/static/main/images/banner.jpg"
+             width=100%
+             height="100%">
+    </header>
+
+    <!-- The navigation bar -->
+    <nav>
+      <div>
+        <p>CSE 477 - Homework 2</p>
+      </div>
+
+        <div>
+            <button class="toggle" type="button">
+                <img src="https://gitlab.msu.edu/cse477-spring-2022/course-materials/-/raw/master/homework/Homework-1/flask_app/static/main/images/menu-bar.png"
+                     width=40px
+                     height=30px>
+            </button>
+        </div>
+
+        <div class="collapse menu_list">
+            <ul class="nav navbar-list">
+                <li><a class="positionText1" href="home.html">Home</a></li>
+                <li><a class="positionText2" href="projects.html">Project</a></li>
+                <li><a class="positionText3" href="https://www.linkedin.com/in/junchi-zhu-65b4b5190/">Resume</a></li>
+                <li><a class="pictureText" href="https://www.linkedin.com/in/junchi-zhu-65b4b5190/">Linkedin</a></li>
+                <li><a class="picture2" href="https://www.linkedin.com/in/junchi-zhu-65b4b5190/">n</a></li>
+                <li><a class="picture" href="https://www.linkedin.com/in/junchi-zhu-65b4b5190/">
+                    <img src="https://gitlab.msu.edu/cse477-spring-2022/course-materials/-/raw/master/homework/Homework-1/flask_app/static/main/images/social-linkedin.png"
+                         class="image_hover"
+                         width="40px"
+                         height="40px">
+                </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- The main content  -->
+    <main>
+      {% block maincontent %}{% endblock %}
+    </main>
+
+    <!-- The footer of the file -->
+    <footer>
+        <p>©2022 Junchi Zhu</p>
+    </footer>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+

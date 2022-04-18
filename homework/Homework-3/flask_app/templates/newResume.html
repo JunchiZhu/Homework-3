@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+
+
+<!-- For each institution - generate a row -->
+{% for inst_id, inst in resume_data.items() %}
+<!-- Do something... -->
+    <div class="flex-container">
+        <div class="item1">
+            <div>
+                <h1>{{ inst['name']}}</h1>
+            </div>
+        </div>
+        <div class="item2">
+            <div>
+                <h4>{{ inst['city'] + ", " + inst['state']}}</h4>
+            </div>
+        </div>
+    </div>
+
+
+{% if inst['positions'] != {} %}
+{% for pos_id, pos in inst['positions'].items() %}
+<!-- Do something else... -->
+<div class="flex-container">
+    <div class="item1">
+        <div>
+            <h2>{{ pos['title']}} </h2>
+        </div>
+    </div>
+    <div class="item2">
+        <div>
+            {% set end = pos['end_date'] %}
+
+            {% if end == None %}
+                {% set end = "Current" %}
+            {% endif %}
+            <h4>{{ pos['start_date']}} - {{ end }}</h4>
+        </div>
+    </div>
+</div>
+<h4>{{ pos['responsibilities']}} </h4>
+
+{% if pos['experiences'] != {} %}
+{% for exp_id, exp in pos['experiences'].items() %}
+<ul>
+    <li class = "li1"><a class = "a1" href="{{ exp['hyperlink'] }}">{{ exp['name'] }}</a>: {{ exp['description'] }}</li>
+</ul>
+
+{% if exp['skills'] != {} %}
+{% for ski_id, ski in exp['skills'].items() %}
+
+<h4 class = "skill">skills: {{ ski['name']}}; skill level: {{ ski['skill_level']}}</h4>
+
+{% endfor %}
+{% endif %}
+
+{% endfor %}
+{% endif %}
+
+
+{% endfor %}
+{% endif %}
+
+
+{% endfor %}
+{% endblock %}
+

@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+<br><br>
+
+{% block body %}
+<h1 class = "noColor">Login</h1>
+<div>
+    <hr class="lineLength">
+</div>
+
+
+<form action="/processlogin" method="POST" >
+    <div class="SignEmail">
+        <input type="text" name="EmailName" id="EmailName" placeholder="Email or UserName">
+    </div>
+
+    <div class="SignPassword">
+        <input type="password" name="Password" id="Password" placeholder="Password">
+    </div>
+</form>
+
+<div class="center">
+    <button onclick="checkCredentials()" class="SignPush" type="submit">Login </button>
+</div>
+
+<div class="center">
+<p id="demo"></p>
+</div>
+
+
+
+<br><br>
+<br><br>
+<br><br>
+
+{% block extrajs %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% endblock %}
+
+<script>
+    let count = 0
+    function checkCredentials() {
+        // package data in a JSON object
+        let inputValue = document.getElementById("EmailName").value;
+        let inputValue2 = document.getElementById("Password").value;
+        var data_d = {'email': inputValue, 'password': inputValue2}
+        console.log('data_d', data_d)
+
+        // SEND DATA TO SERVER VIA jQuery.ajax({})
+
+        jQuery.ajax({
+            url: "/processlogin",
+            data: data_d,
+            type: "POST",
+            success:function(retruned_data){
+                retruned_data = JSON.parse(retruned_data);
+                if (retruned_data["success"] === 1){
+                    window.location.href = "/home";
+                }
+                else {
+                    count += 1;
+                    document.getElementById("demo").innerHTML = " Authentication failure: " + count;
+                }
+            }
+        }
+        );
+    }
+
+</script>
+
+{% endblock %}
+
+

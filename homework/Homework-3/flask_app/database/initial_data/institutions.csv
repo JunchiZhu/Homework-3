@@ -1,0 +1,4 @@
+"inst_id","type","name","department","address","city","state","zip"
+"1","Academia","Michigan State University CSE335","Computer Science",NULL,"East Lansing","Michigan",NULL
+"2","Academia","Michigan State University CSE476","Computer Science",NULL,"East Lansing","Michigan",NULL
+"3","Academia","Michigan State University CSE477","Computer Science",NULL,"East Lansing","Michigan",NULL

@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1 class = "noColor">Chat</h1>
+<div>
+    <hr class="lineLength">
+</div>
+
+<div id='chat' contenteditable></div>
+
+<p class="Chat" id="chatMessage"><input id="chatText" type="text" placeholder="Enter Your Message Here" /></p>
+<button class="ChatLeave" type="submit" onclick="leaveChat()"> Leave </button>
+
+{% block extracss %}
+<style> 
+#chat {
+  width: 100%;
+  height: 350px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+  overflow-y:auto
+}
+</style>
+{% endblock %}
+
+{% block extrajs %}
+<script type="text/javascript" src="//code.jquery.com/jquery-1.4.2.min.js"></script>
+<script src="https://cdn.socket.io/3.1.1/socket.io.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+    var socket;
+
+    $(document).ready(function(){
+
+        socket = io.connect('http://' + document.domain + ':' + location.port + '/chat');
+        socket.on('connect', function() {
+            socket.emit('joined', {});
+        });
+
+        // document.addEventListener('keypress', (event) =>{
+        //     if (event.key === 'Enter'){
+        //         socket.emit('sentMessage', {ChatValue});
+        //     }
+        // })
+
+
+        socket.on('status', function(data) {
+            let tag  = document.createElement("p");
+            let text = document.createTextNode(data.msg);
+            let element = document.getElementById("chat");
+            tag.appendChild(text);
+            tag.style.cssText = data.style;
+            element.appendChild(tag);
+            $('#chat').scrollTop($('#chat')[0].scrollHeight);
+
+        });
+
+        socket.on('messageStatus', function(data) {
+            let tag  = document.createElement("p");
+            let text = document.createTextNode(data.msg);
+            let element = document.getElementById("chat");
+            tag.appendChild(text);
+            tag.style.cssText = data.style;
+            element.appendChild(tag);
+            $('#chat').scrollTop($('#chat')[0].scrollHeight);
+
+        });
+
+         $("#chatText").keypress(function (event){
+             if (event.keyCode === 13){
+                 var Value = $("#chatText").val()
+                 console.log("value", Value)
+                 socket.emit('sentMessage', {msg:Value});
+                 document.getElementById("chatText").value = "";
+             }
+         })
+
+    });
+
+    function leaveChat() {
+        socket.emit('leave', {}, function() {
+            socket.disconnect();
+            window.location.href = "/home";
+        });
+    }
+</script>
+{% endblock %}
+
+
+{% endblock %}
